@@ -1,0 +1,223 @@
+@prefix : <http://nio.nidash.org/> .
+@prefix nio: <http://nio.nidash.org/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3c.org/ns/prov-o#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crypto: <http://www.w3.org/2000/10/swap/crypto#> .
+@base <http://nio.nidash.org/> .
+
+<http://nio.nidash.org/> rdf:type owl:Ontology ;
+                         
+                         owl:versionIRI <http://nio.nidash.org/0.1.0> ;
+                         
+                         owl:imports <http://www.w3.org/ns/prov-o#> .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://www.w3.org/2000/10/swap/crypto#md5
+
+crypto:md5 rdf:type owl:AnnotationProperty ;
+           
+           rdfs:label "MD5 hash" ;
+           
+           rdfs:comment "The object is a MD5 hash of the subject." ;
+           
+           rdfs:domain <http://www.w3.org/2000/10/swap/string#String> .
+
+
+
+###  http://www.w3.org/2000/10/swap/crypto#publicKey
+
+crypto:publicKey rdf:type owl:AnnotationProperty ;
+                 
+                 rdfs:comment """The object is a public key object that doesn't
+    contain the private key data in the subject.
+    This function extracts the public part.""" ;
+                 
+                 rdfs:domain crypto:PublicKeyObject .
+
+
+
+###  http://www.w3.org/2000/10/swap/crypto#sha
+
+crypto:sha rdf:type owl:AnnotationProperty ;
+           
+           rdfs:label "SHA hash" ;
+           
+           rdfs:comment "The object is a SHA-1 hash of the subject." ;
+           
+           rdfs:domain <http://www.w3.org/2000/10/swap/string#String> .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.w3.org/2000/10/swap/crypto#md5
+
+crypto:md5 rdf:type owl:ObjectProperty ;
+           
+           rdfs:label "MD5 hash" ;
+           
+           rdfs:comment "The object is a MD5 hash of the subject." ;
+           
+           rdfs:range <http://www.w3.org/2000/10/swap/string#String> .
+
+
+
+###  http://www.w3.org/2000/10/swap/crypto#publicKey
+
+crypto:publicKey rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:comment """The object is a public key object that doesn't
+    contain the private key data in the subject.
+    This function extracts the public part.""" ;
+                 
+                 rdfs:range crypto:PublicKeyObject .
+
+
+
+###  http://www.w3.org/2000/10/swap/crypto#sha
+
+crypto:sha rdf:type owl:FunctionalProperty ,
+                    owl:InverseFunctionalProperty ,
+                    owl:ObjectProperty ;
+           
+           rdfs:label "SHA hash" ;
+           
+           rdfs:comment "The object is a SHA-1 hash of the subject." ;
+           
+           rdfs:range <http://www.w3.org/2000/10/swap/string#String> .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Property
+
+rdfs:Property rdf:type owl:Class .
+
+
+
+###  http://www.w3.org/2000/10/swap/crypto#HashFunction
+
+crypto:HashFunction rdf:type owl:Class ;
+                    
+                    rdfs:label "Any crypographic hash function" ;
+                    
+                    rdfs:comment """
+The crypographic hash functions are (being functions) unique and are,
+when secure, assumed unambiguous (the whole point of being hash
+functions). That is, when you have the right hash, you have the right
+document. Currently (2001/9) only SHA is given that property.
+""" .
+
+
+
+###  http://www.w3.org/2000/10/swap/crypto#PublicKeyObject
+
+crypto:PublicKeyObject rdf:type owl:Class ;
+                       
+                       rdfs:comment """An object corresponding to a key for some algorithm.
+The object can hold a public and optionally a private key.""" .
+
+
+
+###  http://www.w3.org/2000/10/swap/string#String
+
+<http://www.w3.org/2000/10/swap/string#String> rdf:type owl:Class .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.w3.org/2000/10/swap/crypto#publicKey
+
+crypto:publicKey rdf:type rdfs:Property ,
+                          owl:NamedIndividual ;
+                 
+                 rdfs:comment """The object is a public key object that doesn't
+    contain the private key data in the subject.
+    This function extracts the public part.""" .
+
+
+
+
+
+#################################################################
+#
+#    Annotations
+#
+#################################################################
+
+
+crypto:verify rdfs:comment """If the subject is a key object containing private and
+public parts and the obejct is a list of a hash and a signature, then
+this is true if and only if the signature is a valid signature of the
+hash with the key.""" .
+
+
+
+crypto:HasPrivate rdfs:comment """
+Some keys have private parts, some don't.  This is the class of those which do.
+""" .
+
+
+
+crypto:verifyBoolean rdfs:comment """If the subject is a list containg a keypair, a hash,
+and a signature, then the object is either \"1\" if the signature
+validates or \"0\" if it does not.""" .
+
+
+
+crypto:CanEncrypt rdfs:comment "PublicKeyObjects which are capable of encrypting things" .
+
+
+
+crypto:sign rdfs:label "sign" ;
+            
+            rdfs:comment """The subject should be a list of two things, a hash
+string and a key (containing private and public parts). The object is
+calculated as a signature string by signing the hash with the key's
+private part.""" .
+
+
+
+crypto:CanSign rdfs:comment """PublicKeyObjects which are capable of signing things.
+True if the algorithm is capable of signing data; false otherwise. To
+test if a given key object can sign data, use CanSign and HasPrivate.""" .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
