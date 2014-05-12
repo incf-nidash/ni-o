@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns="http://purl.org/nidash/ni-o/">
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/">
+    <rdfs:label xml:lang="en">NIDASH Ontology (NI-O)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/">
+    <rdfs:comment xml:lang="en">This document is published by the INCF Neuroimaging Data Sharing Task Force .</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/">
+    <owl:versionInfo xml:lang="en">Working Draft</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/">
+    <rdfs:seeAlso>http://nidm.nidash.org</rdfs:seeAlso>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/">
+    <owl:versionIRI rdf:resource="http://purl.org/nidash/ni-o/0.1.0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/">
+    <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/">
+    <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/acquisitionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/acquisitionOf">
+    <rdfs:domain rdf:resource="http://purl.org/nidash/ni-o/AcquisitionObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/acquisitionOf">
+    <rdfs:range rdf:resource="http://purl.org/nidash/ni-o/StudyObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/acquisitionOf">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#specializationOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/experimentAssoication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/experimentAssoication">
+    <rdfs:range rdf:resource="http://purl.org/nidash/ni-o/ExperimentAssociation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/experimentAssoication">
+    <rdfs:domain rdf:resource="http://purl.org/nidash/ni-o/ExperimentProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/experimentAssoication">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#qualifiedAssociation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/hadProtocol">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/hadProtocol">
+    <rdfs:domain rdf:resource="http://purl.org/nidash/ni-o/ExperimentAssociation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/hadProtocol">
+    <rdfs:range rdf:resource="http://purl.org/nidash/ni-o/Protocol"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/hadProtocol">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadPlan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/hadStudyRole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/hadStudyRole">
+    <rdfs:domain rdf:resource="http://purl.org/nidash/ni-o/ExperimentAssociation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/hadStudyRole">
+    <rdfs:range rdf:resource="http://purl.org/nidash/ni-o/StudyRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/hadStudyRole">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/studyOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/studyOf">
+    <rdfs:range rdf:resource="http://purl.org/nidash/ni-o/ProjectObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/studyOf">
+    <rdfs:domain rdf:resource="http://purl.org/nidash/ni-o/StudyObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/studyOf">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#specializationOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/AcquisitionAssociation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/AcquisitionAssociation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentAssociation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/AcquisitionBundle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/AcquisitionBundle">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentBundle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/AcquisitionObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/AcquisitionObject">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/AcquisitionProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/AcquisitionProcess">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/Epoch">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/Epoch">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <owl:onProperty rdf:resource="http://purl.org/nidash/ni-o/hadStudyRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <owl:someValuesFrom rdf:resource="http://purl.org/nidash/ni-o/StudyRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <owl:onProperty rdf:resource="http://purl.org/nidash/ni-o/hadProtocol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <owl:someValuesFrom rdf:resource="http://purl.org/nidash/ni-o/Protocol"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ExperimentAssociation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ExperimentAssociation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Association"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ExperimentAssociation">
+    <rdfs:subClassOf rdf:nodeID="genid1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ExperimentAssociation">
+    <rdfs:subClassOf rdf:nodeID="genid2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ExperimentBundle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ExperimentBundle">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Bundle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ExperimentObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ExperimentObject">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ExperimentProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ExperimentProcess">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/Participant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/Participant">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/StudyRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/PrincipleInvestigator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/PrincipleInvestigator">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/StudyRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ProjectAssociation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ProjectAssociation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentAssociation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ProjectBundle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ProjectBundle">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentBundle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ProjectObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ProjectObject">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ProjectProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ProjectProcess">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/Protocol">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/Protocol">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ResearchAssistant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/ResearchAssistant">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/StudyRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyAssociation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyAssociation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentAssociation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyBundle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyBundle">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentBundle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyObject">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyProcess">
+    <rdfs:subClassOf rdf:resource="http://purl.org/nidash/ni-o/ExperimentProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <owl:onProperty rdf:resource="http://purl.org/nidash/ni-o/hadStudyRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <owl:someValuesFrom rdf:resource="http://purl.org/nidash/ni-o/Participant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <owl:onProperty rdf:resource="http://purl.org/nidash/ni-o/hadStudyRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <owl:someValuesFrom rdf:resource="http://purl.org/nidash/ni-o/ResearchAssistant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <owl:onProperty rdf:resource="http://purl.org/nidash/ni-o/hadStudyRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <owl:someValuesFrom rdf:resource="http://purl.org/nidash/ni-o/PrincipleInvestigator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyRole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyRole">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Role"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyRole">
+    <rdfs:subClassOf rdf:nodeID="genid3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyRole">
+    <rdfs:subClassOf rdf:nodeID="genid4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/nidash/ni-o/StudyRole">
+    <rdfs:subClassOf rdf:nodeID="genid5"/>
+  </rdf:Description>
+</rdf:RDF>
