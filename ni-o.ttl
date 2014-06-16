@@ -1,0 +1,301 @@
+@prefix : <http://purl.org/nidash/ni-o/> .
+@prefix nio: <http://purl.org/nidash/ni-o/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/nidash/ni-o/> .
+
+<http://purl.org/nidash/ni-o/> rdf:type owl:Ontology ;
+                               
+                               rdfs:label "NIDASH Ontology (NI-O)"@en ;
+                               
+                               rdfs:comment "This document is published by the INCF Neuroimaging Data Sharing Task Force ."@en ;
+                               
+                               owl:versionInfo "Working Draft"@en ;
+                               
+                               rdfs:seeAlso "http://nidm.nidash.org" ;
+                               
+                               owl:versionIRI <http://purl.org/nidash/ni-o/0.1.0> ;
+                               
+                               owl:imports rdfs: ,
+                                           <http://www.w3.org/ns/prov-o#> .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://purl.org/nidash/ni-o/acquisitionOf
+
+:acquisitionOf rdf:type owl:ObjectProperty ;
+               
+               rdfs:domain :AcquisitionObject ;
+               
+               rdfs:range :StudyObject ;
+               
+               rdfs:subPropertyOf prov:specializationOf .
+
+
+
+###  http://purl.org/nidash/ni-o/experimentAssoication
+
+:experimentAssoication rdf:type owl:ObjectProperty ;
+                       
+                       rdfs:range :ExperimentAssociation ;
+                       
+                       rdfs:domain :ExperimentProcess ;
+                       
+                       rdfs:subPropertyOf prov:qualifiedAssociation .
+
+
+
+###  http://purl.org/nidash/ni-o/hadProtocol
+
+:hadProtocol rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain :ExperimentAssociation ;
+             
+             rdfs:range :Protocol ;
+             
+             rdfs:subPropertyOf prov:hadPlan .
+
+
+
+###  http://purl.org/nidash/ni-o/hadStudyRole
+
+:hadStudyRole rdf:type owl:ObjectProperty ;
+              
+              rdfs:domain :ExperimentAssociation ;
+              
+              rdfs:range :StudyRole ;
+              
+              rdfs:subPropertyOf prov:hadRole .
+
+
+
+###  http://purl.org/nidash/ni-o/studyOf
+
+:studyOf rdf:type owl:ObjectProperty ;
+         
+         rdfs:range :ProjectObject ;
+         
+         rdfs:domain :StudyObject ;
+         
+         rdfs:subPropertyOf prov:specializationOf .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://purl.org/nidash/ni-o/AcquisitionAssociation
+
+:AcquisitionAssociation rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :ExperimentAssociation .
+
+
+
+###  http://purl.org/nidash/ni-o/AcquisitionBundle
+
+:AcquisitionBundle rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :ExperimentBundle .
+
+
+
+###  http://purl.org/nidash/ni-o/AcquisitionObject
+
+:AcquisitionObject rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :ExperimentObject .
+
+
+
+###  http://purl.org/nidash/ni-o/AcquisitionProcess
+
+:AcquisitionProcess rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :ExperimentProcess .
+
+
+
+###  http://purl.org/nidash/ni-o/Epoch
+
+:Epoch rdf:type owl:Class ;
+       
+       rdfs:subClassOf prov:Plan .
+
+
+
+###  http://purl.org/nidash/ni-o/ExperimentAssociation
+
+:ExperimentAssociation rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf prov:Association ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hadStudyRole ;
+                                         owl:someValuesFrom :StudyRole
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hadProtocol ;
+                                         owl:someValuesFrom :Protocol
+                                       ] .
+
+
+
+###  http://purl.org/nidash/ni-o/ExperimentBundle
+
+:ExperimentBundle rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf prov:Bundle .
+
+
+
+###  http://purl.org/nidash/ni-o/ExperimentObject
+
+:ExperimentObject rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf prov:Entity .
+
+
+
+###  http://purl.org/nidash/ni-o/ExperimentProcess
+
+:ExperimentProcess rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf prov:Activity .
+
+
+
+###  http://purl.org/nidash/ni-o/Participant
+
+:Participant rdf:type owl:Class ;
+             
+             rdfs:subClassOf :StudyRole .
+
+
+
+###  http://purl.org/nidash/ni-o/PrincipleInvestigator
+
+:PrincipleInvestigator rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :StudyRole .
+
+
+
+###  http://purl.org/nidash/ni-o/ProjectAssociation
+
+:ProjectAssociation rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :ExperimentAssociation .
+
+
+
+###  http://purl.org/nidash/ni-o/ProjectBundle
+
+:ProjectBundle rdf:type owl:Class ;
+               
+               rdfs:subClassOf :ExperimentBundle .
+
+
+
+###  http://purl.org/nidash/ni-o/ProjectObject
+
+:ProjectObject rdf:type owl:Class ;
+               
+               rdfs:subClassOf :ExperimentObject .
+
+
+
+###  http://purl.org/nidash/ni-o/ProjectProcess
+
+:ProjectProcess rdf:type owl:Class ;
+                
+                rdfs:subClassOf :ExperimentProcess .
+
+
+
+###  http://purl.org/nidash/ni-o/Protocol
+
+:Protocol rdf:type owl:Class ;
+          
+          rdfs:subClassOf prov:Plan .
+
+
+
+###  http://purl.org/nidash/ni-o/ResearchAssistant
+
+:ResearchAssistant rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :StudyRole .
+
+
+
+###  http://purl.org/nidash/ni-o/StudyAssociation
+
+:StudyAssociation rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :ExperimentAssociation .
+
+
+
+###  http://purl.org/nidash/ni-o/StudyBundle
+
+:StudyBundle rdf:type owl:Class ;
+             
+             rdfs:subClassOf :ExperimentBundle .
+
+
+
+###  http://purl.org/nidash/ni-o/StudyObject
+
+:StudyObject rdf:type owl:Class ;
+             
+             rdfs:subClassOf :ExperimentObject .
+
+
+
+###  http://purl.org/nidash/ni-o/StudyProcess
+
+:StudyProcess rdf:type owl:Class ;
+              
+              rdfs:subClassOf :ExperimentProcess .
+
+
+
+###  http://purl.org/nidash/ni-o/StudyRole
+
+:StudyRole rdf:type owl:Class ;
+           
+           rdfs:subClassOf prov:Role ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hadStudyRole ;
+                             owl:someValuesFrom :Participant
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hadStudyRole ;
+                             owl:someValuesFrom :ResearchAssistant
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hadStudyRole ;
+                             owl:someValuesFrom :PrincipleInvestigator
+                           ] .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
