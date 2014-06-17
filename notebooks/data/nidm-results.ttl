@@ -1,0 +1,449 @@
+@prefix nidm: <http://www.incf.org/ns/nidash/nidm#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+nidm:CenterOfGravity a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "Centre Of Gravity for the cluster, equivalent to the concept of Centre Of Gravity for a object with distributed mass, where intensity substitutes for mass in this case (definition from http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Cluster)" .
+
+nidm:ClusterStatistic a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "Statistic defined at the cluster-level in an excusion set. In SPM it is defined as the cluster size. " .
+
+nidm:ConjunctionInference a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Activity ;
+    rdfs:subClassOf prov:Activity ;
+    prov:definition "Inference testing for the joint significance of all effects." .
+
+nidm:ContrastEstimation a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Activity ;
+    rdfs:subClassOf prov:Activity ;
+    prov:definition "The process of estimating a contrast from the estimated parameters of statistical model." .
+
+nidm:ContrastMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "A map whose value at each location is statistical contrast estimate." .
+
+nidm:ContrastStandardErrorMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "A map whose value at each location is the standard error of a given contrast." .
+
+nidm:ContrastWeights a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "Vector defining the linear combination associated with a particular contrast. " .
+
+nidm:Coordinate a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "A point in N-dimensional space where the dimensions could be arbitrary." .
+
+nidm:CoordinateSpace a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "An entity with spatial attributes (e.g., dimensions, units, and voxel-to-world mapping) that provides context to a SpatialImage (e.g., a StatisticMap)." .
+
+nidm:CustomMaskMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "mask defined by the user to restrain the space in which model fitting is performed." .
+
+nidm:Data a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "\"A collection or single item of factual information, derived from measurement or research, from which conclusions may be drawn.\"" .
+
+nidm:DesignMatrix a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "A matrix of values defining the explanatory variables used in a regression model.  Each column corresponds to one explanatory variable, each row corresponds to one observation." .
+
+nidm:ExcursionSet a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "Set of map elements surviving a thresholding procedure." .
+
+nidm:ExtentThreshold a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition """A numerical value that establishes a bound on a range of cluster-sizes. / [from extentThresh:]        Minimum cluster size used when thresholding a statistic image        5voxels
+""" .
+
+nidm:FContrastWeights a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "Contrast based on an F-statistic." .
+
+nidm:FStatisticMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "A map whose value at each location is an F-statistic. " .
+
+nidm:HeightThreshold a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition """A numerical value that establishes a bound on a range of voxelwise or vertex-wise defined statistic.
+""" .
+
+nidm:Inference a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Activity ;
+    rdfs:subClassOf prov:Activity ;
+    prov:definition "The process of inferring the excursion set from a statistical map." .
+
+nidm:InferenceOneTailed a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Activity ;
+    rdfs:subClassOf prov:Activity ;
+    prov:definition "Inference in which the critical area of a distribution is one-sided so that it is either greater than or less than a certain value, but not both. (from \"one-tailed test\" in investopedia)" .
+
+nidm:InferenceTwoTailed a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Activity ;
+    rdfs:subClassOf prov:Activity ;
+    prov:definition "Inference in which the critical area of a distribution is two sided and tests whether a sample is either greater than or less than a certain range of values. (from \"two-tailed test\" in investopedia)" .
+
+nidm:Map a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition """
+2D or 3D structured dataset.""" .
+
+nidm:MaskMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "map or surface on which the associated results are displayed. " .
+
+nidm:MniCoordinateSystem a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "Coordinate system defined with reference to the MNI atlas." .
+
+nidm:ModelParametersEstimation a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Activity ;
+    rdfs:subClassOf prov:Activity ;
+    prov:definition "The process of estimating the parameters of a general linear model from the available data." .
+
+nidm:ParameterEstimateMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "A map whose value at each location is the estimate of a model parameter." .
+
+nidm:PeakStatistic a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "Statistic defined at the peak-level in an excursion set." .
+
+nidm:ReselsPerVoxelMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "A map whose value at each location is the number of resels per voxel. " .
+
+nidm:ResidualMeanSquaresMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition """A map whose value at each location is the residual of the mean squares fit to the data.
+""" .
+
+nidm:SPM a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "Statistical Parametric Mapping software package for the analysis of neuroimaging data from the FIL Methods Group." .
+
+nidm:SearchSpaceMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "mask in which the inference was performed." .
+
+nidm:SetStatistic a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "Statistic defined at the set-level in an excusion set. In SPM it is defined as the number of clusters above a given size in an excursion set. " .
+
+nidm:StatisticImageProperties a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "Properties of the underlying statistical process." .
+
+nidm:StatisticalMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "A map whose value at each location is a statistic. " .
+
+nidm:SubVolumeMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "mask defined by the user to restrain the space in which inference is performed." .
+
+nidm:TContrastWeights a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "Contrast based on a t-statistic." .
+
+nidm:TStatisticMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "A map whose value at each location is a T-statistic value. " .
+
+nidm:ZStatisticMap a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Entity ;
+    rdfs:subClassOf prov:Entity ;
+    prov:definition "A map whose value at each location is a Z-statistic value. " .
+
+nidm:atCoordinateSpace a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Attribute between a SpatialImage entity and a CoordinateSpace entity that is used to associate spatial metadata with a physical file." .
+
+nidm:clusterLabelId a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Integer associated with a particular cluster as specified in the clusterLabelsMap." .
+
+nidm:clusterLabelsMap a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "A map whose value at each location denotes cluster membership. Each cluster is denoted by a different integer." .
+
+nidm:clusterSizeInResels a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Number of resels that make up a cluster." .
+
+nidm:clusterSizeInVertices a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Number of vertices that make up the cluster." .
+
+nidm:clusterSizeInVoxels a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Number of voxels that make up the cluster." .
+
+nidm:contrastName a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Name of the contrast." .
+
+nidm:coordinate1 a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Coordinate along the first dimension in voxels." .
+
+nidm:coordinate1InUnits a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Coordinate along the first dimension in voxel units." .
+
+nidm:coordinate2 a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Coordinate along the second dimension in voxels." .
+
+nidm:coordinate2InUnits a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Coordinate along the second dimension in voxel units." .
+
+nidm:coordinate3 a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Coordinate along the third dimension in voxels." .
+
+nidm:coordinate3InUnits a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Coordinate along the third dimension in voxel units" .
+
+nidm:coordinateSystem a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Type of coordinate system." .
+
+nidm:dimensions a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Dimensions of some N-dimensional data." .
+
+nidm:effectDegreesOfFreedom a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Degrees of freedom of the effect." .
+
+nidm:equivalentZStatistic a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Statistic value transformed into Z units; the output of a process which takes a non-normal statistic and transforms it to an equivalent z score." .
+
+nidm:errorDegreesOfFreedom a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Degrees of freedom of the error." .
+
+nidm:expectedNumberOfClusters a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Expected number of clusters in an excursion set." .
+
+nidm:expectedNumberOfVerticesPerCluster a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Expected number of vertices in a cluster." .
+
+nidm:expectedNumberOfVoxelsPerCluster a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Expected number of voxels in a cluster." .
+
+nidm:f-statistic a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "The statistic from the F-test, a test of the hypothesis that the standard deviations of two normally distributed populations are equal, and thus that they are of comparable origin." .
+
+nidm:grandMeanScaling a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Binary flag defining whether the data was scaled. Specifically, \"grand mean scaling\" refers to multipliciation of every voxel in every scan by a common value.  Grand mean scaling is essential for first-level fMRI, to transform the arbitrary MRI units, but is generally not used with second level analyses." .
+
+<http://www.incf.org/ns/nidash/nidm#heightCriticalThresholdFDR05
+> a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Peak statistic threshold corrected for false discovery rate at a level of alpha = 0.05. " .
+
+nidm:heightCriticalThresholdFWE05 a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Peak statistic threshold corrected for family-wise error at a level of alpha = 0.05. " .
+
+nidm:intraMaskMedian a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Median value considering only in-mask voxels. Useful diagnostic when computed on grand mean image when grandMeanScaling is TRUE, as the median should be close to targetIntensity." .
+
+nidm:kConjunctionInference a <http://www.w3.org/2002/07/owl#Class>,
+        prov:Activity ;
+    rdfs:subClassOf prov:Activity ;
+    prov:definition "Inference testing for the joint significance of a subset of the effects." .
+
+nidm:maximumIntensityProjection a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Maximum intensity projection of a map." .
+
+nidm:noiseFWHM a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Estimated Full Width at Half Maximum of the noise distribution." .
+
+nidm:noiseFWHMInUnits a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Estimated Full Width at Half Maximum of the noise distribution in world units." .
+
+nidm:noiseFWHMInVertices a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Estimated Full Width at Half Maximum of the noise distribution in world vertices." .
+
+nidm:noiseFWHMInVoxels a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Estimated Full Width at Half Maximum of the noise distribution in voxels." .
+
+nidm:nonStationaryRandomField a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Random field that is variable across the search volume." .
+
+nidm:numberOfDimensions a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Number of dimensions of a data matrix." .
+
+nidm:originalFileName a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Original name associated with a file (without path) in the context of the analysis software package." .
+
+nidm:pValue a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "\"A quantitative confidence value that represents the probability of obtaining a result at least as extreme as that actually obtained, assuming that the actual value was the result of chance alone.\"" .
+
+nidm:pValueFWER a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "\"A quantitative confidence value resulting from a multiple testing error correction method which adjusts the p-value used as input to control for Type I error in the context of multiple pairwise tests\"" .
+
+nidm:pValueUncorrected a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "A p-value reported without correction for multiple testing.        " .
+
+nidm:qValueFDR a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "P-value adjusted for the multiple testing, controlling for the False Discovery Rate" .
+
+nidm:randomFieldStationarity a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Is the random field assumed to be stationary across the entire search volume?" .
+
+nidm:reselSize a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Size of one resel in voxels or vertices." .
+
+<http://www.incf.org/ns/nidash/nidm#searchVolumeInProductOfUnits
+> a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Total number of product of coordinate units within the search volume." .
+
+nidm:searchVolumeInResels a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Total number of resels within the search volume." .
+
+nidm:searchVolumeInVertices a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Total number of vertices within the search volume." .
+
+nidm:searchVolumeInVoxels a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Total number of voxels within the search volume." .
+
+nidm:searchVolumeReselsGeometry a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Description of geometry of search volume.  As per Worsley et al. [ http://www.ncbi.nlm.nih.gov/pubmed/20408186 ], the first element is the Euler Characteristic of the search volume, the second element is twice the average caliper diameter, the third element is half the surface area, and the fourth element is the volume.  With the exception of the first element (which is a unitless integer) all quantities are in units of Resels." .
+
+nidm:smallestSignifClusterSizeInVerticesFDR05 a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Smallest cluster size in vertices that are significant at a false discovery rate corrected alpha value of 0.05.  " .
+
+nidm:smallestSignifClusterSizeInVerticesFWE05 a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition """Smallest cluster size in vertices significant at family-wise error rate corrected alpha value of 0.05. 
+""" .
+
+nidm:smallestSignifClusterSizeInVoxelsFDR05 a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Smallest cluster size in voxels significant at false discovery rate corrected alpha value of 0.05.  " .
+
+nidm:smallestSignifClusterSizeInVoxelsFWE05 a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition """Smallest cluster size in voxels significant at family-wise error corrected alpha value of 0.05. 
+""" .
+
+nidm:smoothingFWHM a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Full width at half maximum of a Gaussian smoothing kernel in real world units (e.g. mm mm mm)." .
+
+nidm:softwareRevision a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "revision number of a piece of software." .
+
+nidm:softwareVersion a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Name and number that specifies the software version." .
+
+nidm:standardError a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "\"A quantitative confidence value which is the standard deviations of the sample in a frequency distribution, obtained by dividing the standard deviation by the total number of cases in the frequency distribution.\"" .
+
+nidm:stationaryRandomField a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Random-field that is constant across the search volume." .
+
+nidm:targetIntensity a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Value to which the grand mean of the Data was scaled (applies only if grandMeanScaling is true)." .
+
+nidm:underlayFile a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Map or surface on which the associated results are displayed. " .
+
+nidm:userSpecifiedThresholdType a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Type (p-value either corrected or uncorrected or statistic) of the user-defined height threshold" .
+
+nidm:visualisation a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Graphical representation of an entity." .
+
+nidm:voxelSize a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "3D size of a voxel measured in voxelUnits." .
+
+nidm:voxelToWorldMapping a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Voxel to World Mapping. Change-of-basis matrix from the voxel to world space?" .
+
+nidm:voxelUnits a <http://www.w3.org/2002/07/owl#DatatypeProperty>,
+        prov:Agent ;
+    prov:definition "Units associated with each dimensions of some N-dimensional data." .
+
