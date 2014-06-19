@@ -205,7 +205,7 @@ NIDM Concept ID: nidm_101. """ ;
     rdfs:subClassOf prov:Entity ;
     prov:definition "mask defined by the user to restrain the space in which inference is performed." .
 
-nidm:atCoordinateSpace a owl:DatatypeProperty,
+nidm:atCoordinateSpace a owl:ObjectProperty,
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_2. """ ;
