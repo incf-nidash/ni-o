@@ -1076,5 +1076,5 @@ NIDM Concept ID: nidm_39. """ ;
 
 rdfs:subPropertyOf rdf:type rdf:Property .
 rdfs:range rdf:type rdf:Property .
-ndfs:domain rdf:type rdf:Property. 
+rdfs:domain rdf:type rdf:Property. 
 prov:SoftwareAgent rdfs:subClassOf prov:Agent .
