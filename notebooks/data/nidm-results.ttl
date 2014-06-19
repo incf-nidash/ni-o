@@ -191,7 +191,8 @@ nidm:SubVolumeMap a owl:Class ;
     rdfs:subClassOf prov:Entity ;
     prov:definition "mask defined by the user to restrain the space in which inference is performed." .
 
-nidm:atCoordinateSpace a owl:DatatypeProperty;
+nidm:atCoordinateSpace a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_1. """ ;
     rdfs:domain nidm:Map ;
@@ -199,7 +200,8 @@ NIDM Concept ID: nidm_1. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Attribute between a SpatialImage entity and a CoordinateSpace entity that is used to associate spatial metadata with a physical file." .
 
-nidm:clusterLabelId a owl:DatatypeProperty;
+nidm:clusterLabelId a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "5" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_2. """ ;
@@ -208,17 +210,19 @@ NIDM Concept ID: nidm_2. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Integer associated with a particular cluster as specified in the clusterLabelsMap." .
 
-nidm:clusterLabelsMap a owl:DatatypeProperty;
+nidm:clusterLabelsMap a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "file:///path/to/cluster_labels.img" ;
     ns1:iao.owlIAO_0000116 """Range: Pathtoaniftiimage not found. BIRNLex or 
 NIDM Concept ID: nidm_3. """ ;
     rdfs:domain nidm:ExcursionSet ;
     rdfs:range "Pathtoaniftiimage" ;
-    rdfs:subClassOf nidm:Map,
-        prov:Attribute ;
+    rdfs:subClassOf prov:Attribute ;
+    rdfs:subPropertyOf nidm:Map ;
     prov:definition "A map whose value at each location denotes cluster membership. Each cluster is denoted by a different integer." .
 
-nidm:clusterSizeInVertices a owl:DatatypeProperty;
+nidm:clusterSizeInVertices a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "10" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_4. """ ;
@@ -228,7 +232,8 @@ NIDM Concept ID: nidm_4. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Number of vertices that make up the cluster." .
 
-nidm:clusterSizeInVoxels a owl:DatatypeProperty;
+nidm:clusterSizeInVoxels a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "18" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_5. """ ;
@@ -238,7 +243,8 @@ NIDM Concept ID: nidm_5. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Number of voxels that make up the cluster." .
 
-nidm:contrastName a owl:DatatypeProperty;
+nidm:contrastName a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "\"Listening > Rest\"" ;
     ns1:iao.owlIAO_0000116 """Range: String not found. BIRNLex or 
 NIDM Concept ID: nidm_10. """ ;
@@ -250,7 +256,8 @@ NIDM Concept ID: nidm_10. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Name of the contrast." .
 
-nidm:coordinate1 a owl:DatatypeProperty;
+nidm:coordinate1 a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "-60" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_14. """ ;
@@ -259,7 +266,8 @@ NIDM Concept ID: nidm_14. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Coordinate along the first dimension in voxels." .
 
-nidm:coordinate1InUnits a owl:DatatypeProperty;
+nidm:coordinate1InUnits a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "-60" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_15. """ ;
@@ -268,7 +276,8 @@ NIDM Concept ID: nidm_15. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Coordinate along the first dimension in voxel units." .
 
-nidm:coordinate2 a owl:DatatypeProperty;
+nidm:coordinate2 a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "-28" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_16. """ ;
@@ -277,7 +286,8 @@ NIDM Concept ID: nidm_16. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Coordinate along the second dimension in voxels." .
 
-nidm:coordinate2InUnits a owl:DatatypeProperty;
+nidm:coordinate2InUnits a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "-28" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_17. """ ;
@@ -286,7 +296,8 @@ NIDM Concept ID: nidm_17. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Coordinate along the second dimension in voxel units." .
 
-nidm:coordinate3 a owl:DatatypeProperty;
+nidm:coordinate3 a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "13" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_18. """ ;
@@ -295,7 +306,8 @@ NIDM Concept ID: nidm_18. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Coordinate along the third dimension in voxels." .
 
-nidm:coordinate3InUnits a owl:DatatypeProperty;
+nidm:coordinate3InUnits a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "13" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_19. """ ;
@@ -304,7 +316,8 @@ NIDM Concept ID: nidm_19. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Coordinate along the third dimension in voxel units" .
 
-nidm:coordinateSystem a owl:DatatypeProperty;
+nidm:coordinateSystem a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "nidm:MniCoordinateSystem" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_21. """ ;
@@ -313,7 +326,8 @@ NIDM Concept ID: nidm_21. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Type of coordinate system." .
 
-nidm:effectDegreesOfFreedom a owl:DatatypeProperty;
+nidm:effectDegreesOfFreedom a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "1" ;
     ns1:iao.owlIAO_0000116 """Range: Positivefloat not found. BIRNLex or 
 NIDM Concept ID: nidm_25. """ ;
@@ -322,17 +336,19 @@ NIDM Concept ID: nidm_25. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Degrees of freedom of the effect." .
 
-nidm:equivalentZStatistic a owl:DatatypeProperty;
+nidm:equivalentZStatistic a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "3.5" ;
     ns1:iao.owlIAO_0000116 """Context: Functional. Parent: Data transformation;  http://purl.obolibrary.org/obo/OBI_0200000 not found. BIRNLex or 
 NIDM Concept ID: nidm_26. new parent: Peak. """ ;
     rdfs:domain nidm:PeakStatistic ;
     rdfs:range "http://www.w3.org/2001/XMLSchema#float" ;
-    rdfs:subClassOf prov:Attribute,
-        "Data transformation;  http://purl.obolibrary.org/obo/OBI_0200000" ;
+    rdfs:subClassOf prov:Attribute ;
+    rdfs:subPropertyOf "Data transformation;  http://purl.obolibrary.org/obo/OBI_0200000" ;
     prov:definition "Statistic value transformed into Z units; the output of a process which takes a non-normal statistic and transforms it to an equivalent z score." .
 
-nidm:errorDegreesOfFreedom a owl:DatatypeProperty;
+nidm:errorDegreesOfFreedom a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "72.999999" ;
     ns1:iao.owlIAO_0000116 """Range: Positivefloat not found. BIRNLex or 
 NIDM Concept ID: nidm_27. """ ;
@@ -341,7 +357,8 @@ NIDM Concept ID: nidm_27. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Degrees of freedom of the error." .
 
-nidm:f-statistic a owl:DatatypeProperty;
+nidm:f-statistic a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000116 """Context: io terms. Domain or Attributes: <notdirectlyinuse> not found. BIRNLex or 
 NIDM Concept ID: nidm_30. """ ;
     rdfs:domain "<notdirectlyinuse>" ;
@@ -350,7 +367,8 @@ NIDM Concept ID: nidm_30. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "The statistic from the F-test, a test of the hypothesis that the standard deviations of two normally distributed populations are equal, and thus that they are of comparable origin." .
 
-nidm:grandMeanScaling a owl:DatatypeProperty;
+nidm:grandMeanScaling a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "TRUE" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_94. """ ;
@@ -359,7 +377,8 @@ NIDM Concept ID: nidm_94. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Binary flag defining whether the data was scaled. Specifically, \"grand mean scaling\" refers to multipliciation of every voxel in every scan by a common value.  Grand mean scaling is essential for first-level fMRI, to transform the arbitrary MRI units, but is generally not used with second level analyses." .
 
-nidm:intraMaskMedian a owl:DatatypeProperty;
+nidm:intraMaskMedian a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "155.23" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_96. """ ;
@@ -369,7 +388,8 @@ NIDM Concept ID: nidm_96. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Median value considering only in-mask voxels. Useful diagnostic when computed on grand mean image when grandMeanScaling is TRUE, as the median should be close to targetIntensity." .
 
-nidm:numberOfDimensions a owl:DatatypeProperty;
+nidm:numberOfDimensions a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "3" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_42. """ ;
@@ -378,7 +398,8 @@ NIDM Concept ID: nidm_42. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Number of dimensions of a data matrix." .
 
-nidm:originalFileName a owl:DatatypeProperty;
+nidm:originalFileName a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "con_0001.img" ;
     ns1:iao.owlIAO_0000116 """Range: String not found. BIRNLex or 
 NIDM Concept ID: nidm_43. """ ;
@@ -389,7 +410,8 @@ NIDM Concept ID: nidm_43. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Original name associated with a file (without path) in the context of the analysis software package." .
 
-nidm:pValue a owl:DatatypeProperty;
+nidm:pValue a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "8.95E-14" ;
     ns1:iao.owlIAO_0000116 """Range: Floatbetween0and1 not found. BIRNLex or 
 NIDM Concept ID: nidm_46. """ ;
@@ -402,7 +424,8 @@ http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P-Value""" ;
     owl:sameAs "This definition is from OBI. Please update this note if the definition is modified." ;
     prov:definition "\"A quantitative confidence value that represents the probability of obtaining a result at least as extreme as that actually obtained, assuming that the actual value was the result of chance alone.\"" .
 
-nidm:pValueFWER a owl:DatatypeProperty;
+nidm:pValueFWER a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "0.05" ;
     ns1:iao.owlIAO_0000116 """Range: Floatbetween0and1 not found. BIRNLex or 
 NIDM Concept ID: nidm_47. """ ;
@@ -416,7 +439,8 @@ NIDM Concept ID: nidm_47. """ ;
     owl:sameAs "This definition is from OBI. Please update this note if the definition is modified." ;
     prov:definition "\"A quantitative confidence value resulting from a multiple testing error correction method which adjusts the p-value used as input to control for Type I error in the context of multiple pairwise tests\"" .
 
-nidm:pValueUncorrected a owl:DatatypeProperty;
+nidm:pValueUncorrected a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "0.0542" ;
     ns1:iao.owlIAO_0000116 """Parent: p-value i.e. nidm:nidm_0011 not found. Range: Floatbetween0and1 not found. BIRNLex or 
 NIDM Concept ID: nidm_48. """ ;
@@ -426,11 +450,12 @@ NIDM Concept ID: nidm_48. """ ;
         nidm:PeakStatistic ;
     rdfs:range "Floatbetween0and1" ;
     rdfs:seeAlso "http://purl.obolibrary.org/obo/IAO_0000121" ;
-    rdfs:subClassOf prov:Attribute,
-        "p-value i.e. nidm:nidm_0011" ;
+    rdfs:subClassOf prov:Attribute ;
+    rdfs:subPropertyOf "p-value i.e. nidm:nidm_0011" ;
     prov:definition "A p-value reported without correction for multiple testing.        " .
 
-nidm:qValueFDR a owl:DatatypeProperty;
+nidm:qValueFDR a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "0.000154" ;
     ns1:iao.owlIAO_0000116 """Parent: p-value i.e. nidm:nidm_0011 not found. Range: Floatbetween0and1 not found. BIRNLex or 
 NIDM Concept ID: nidm_49. """ ;
@@ -440,11 +465,12 @@ NIDM Concept ID: nidm_49. """ ;
         nidm:PeakStatistic ;
     rdfs:range "Floatbetween0and1" ;
     rdfs:seeAlso "http://purl.obolibrary.org/obo/OBI_0001442" ;
-    rdfs:subClassOf prov:Attribute,
-        "p-value i.e. nidm:nidm_0011" ;
+    rdfs:subClassOf prov:Attribute ;
+    rdfs:subPropertyOf "p-value i.e. nidm:nidm_0011" ;
     prov:definition "P-value adjusted for the multiple testing, controlling for the False Discovery Rate" .
 
-nidm:smoothingFWHM a owl:DatatypeProperty;
+nidm:smoothingFWHM a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "[6 6 6]" ;
     ns1:iao.owlIAO_0000116 """Domain or Attributes: <notinuse> not found. BIRNLex or 
 NIDM Concept ID: nidm_53. """ ;
@@ -453,7 +479,8 @@ NIDM Concept ID: nidm_53. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Full width at half maximum of a Gaussian smoothing kernel in real world units (e.g. mm mm mm)." .
 
-nidm:softwareVersion a owl:DatatypeProperty;
+nidm:softwareVersion a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "SPM99, SPM2, SPM5, SPM8, SPM12b, FSL5.0.0" ;
     ns1:iao.owlIAO_0000116 """Range: String not found. BIRNLex or 
 NIDM Concept ID: nidm_54. """ ;
@@ -462,7 +489,8 @@ NIDM Concept ID: nidm_54. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Name and number that specifies the software version." .
 
-nidm:standardError a owl:DatatypeProperty;
+nidm:standardError a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000116 """Domain or Attributes: <notinuse> not found. BIRNLex or 
 NIDM Concept ID: nidm_56. """ ;
     rdfs:domain "<notinuse>" ;
@@ -471,7 +499,8 @@ NIDM Concept ID: nidm_56. """ ;
     owl:sameAs "This definition is from OBI. Please update this note if the definition is modified." ;
     prov:definition "\"A quantitative confidence value which is the standard deviations of the sample in a frequency distribution, obtained by dividing the standard deviation by the total number of cases in the frequency distribution.\"" .
 
-nidm:stationaryRandomField a owl:DatatypeProperty;
+nidm:stationaryRandomField a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "<this is an attribute value>" ;
     ns1:iao.owlIAO_0000116 """Range: <thisisanattributevalue> not found. BIRNLex or 
 NIDM Concept ID: nidm_57. """ ;
@@ -480,7 +509,8 @@ NIDM Concept ID: nidm_57. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Random-field that is constant across the search volume." .
 
-nidm:targetIntensity a owl:DatatypeProperty;
+nidm:targetIntensity a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "100" ;
     ns1:iao.owlIAO_0000116 """Range: positivefloat not found. BIRNLex or 
 NIDM Concept ID: nidm_95. """ ;
@@ -489,17 +519,19 @@ NIDM Concept ID: nidm_95. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Value to which the grand mean of the Data was scaled (applies only if grandMeanScaling is true)." .
 
-nidm:underlayFile a owl:DatatypeProperty;
+nidm:underlayFile a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "MNI152.nii.gz or cortex.surf.gii" ;
     ns1:iao.owlIAO_0000116 """Parent: nidm:map not found. Range: Pathtoaniftiimage not found. BIRNLex or 
 NIDM Concept ID: nidm_62. """ ;
     rdfs:domain nidm:ExcursionSet ;
     rdfs:range "Pathtoaniftiimage" ;
-    rdfs:subClassOf prov:Attribute,
-        "nidm:map" ;
+    rdfs:subClassOf prov:Attribute ;
+    rdfs:subPropertyOf "nidm:map" ;
     prov:definition "Map or surface on which the associated results are displayed. " .
 
-nidm:userSpecifiedThresholdType a owl:DatatypeProperty;
+nidm:userSpecifiedThresholdType a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "nidm:pValueFWER" ;
     ns1:iao.owlIAO_0000116 """Range: {'nidm:pValueFWER' not found'nidm:pValueFDR' not found'nidm:pValueUncorrected';'nidm:statistic'} not found. BIRNLex or 
 NIDM Concept ID: nidm_63. """ ;
@@ -511,7 +543,8 @@ NIDM Concept ID: nidm_63. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Type (p-value either corrected or uncorrected or statistic) of the user-defined height threshold" .
 
-nidm:visualisation a owl:DatatypeProperty;
+nidm:visualisation a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "file:///path/to/design_matrix.png" ;
     ns1:iao.owlIAO_0000116 """Range: Pathtoanimage(e.g.png) not found. BIRNLex or 
 NIDM Concept ID: nidm_64. """ ;
@@ -520,7 +553,8 @@ NIDM Concept ID: nidm_64. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Graphical representation of an entity." .
 
-nidm:voxelSize a owl:DatatypeProperty;
+nidm:voxelSize a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "[2 2 4]" ;
     ns1:iao.owlIAO_0000116 """Parent: size  not found. Range: Vectoroffloats not found. BIRNLex or 
 NIDM Concept ID: nidm_65. """ ;
@@ -528,11 +562,12 @@ NIDM Concept ID: nidm_65. """ ;
     rdfs:range "Vectoroffloats" ;
     rdfs:seeAlso """http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C95003 
 """ ;
-    rdfs:subClassOf prov:Attribute,
-        "size " ;
+    rdfs:subClassOf prov:Attribute ;
+    rdfs:subPropertyOf "size " ;
     prov:definition "3D size of a voxel measured in voxelUnits." .
 
-nidm:voxelToWorldMapping a owl:DatatypeProperty;
+nidm:voxelToWorldMapping a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "[3 0 0 0;0 3 0 0;0 0 3 0; 0 0 0 1] " ;
     ns1:iao.owlIAO_0000116 """Range: Matrixoffloat not found. BIRNLex or 
 NIDM Concept ID: nidm_66. """ ;
@@ -541,7 +576,8 @@ NIDM Concept ID: nidm_66. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Voxel to World Mapping. Change-of-basis matrix from the voxel to world space?" .
 
-nidm:voxelUnits a owl:DatatypeProperty;
+nidm:voxelUnits a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "{'mm' 'mm' 's'}" ;
     ns1:iao.owlIAO_0000116 """Range: Vectorofstrings not found. BIRNLex or 
 NIDM Concept ID: nidm_67. """ ;
@@ -563,7 +599,8 @@ NIDM Concept ID: spm_81. """ ;
     rdfs:subClassOf prov:Entity ;
     prov:definition "A map whose value at each location is the number of resels per voxel. " .
 
-spm:clusterSizeInResels a owl:DatatypeProperty;
+spm:clusterSizeInResels a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "13" ;
     ns1:iao.owlIAO_0000116 """Range: Positivefloat not found. BIRNLex or 
 NIDM Concept ID: spm_68. """ ;
@@ -573,7 +610,8 @@ NIDM Concept ID: spm_68. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Number of resels that make up a cluster." .
 
-spm:expectedNumberOfClusters a owl:DatatypeProperty;
+spm:expectedNumberOfClusters a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "9.51" ;
     ns1:iao.owlIAO_0000116 """Range: Positivefloat not found. BIRNLex or 
 NIDM Concept ID: spm_69. """ ;
@@ -582,7 +620,8 @@ NIDM Concept ID: spm_69. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Expected number of clusters in an excursion set." .
 
-spm:expectedNumberOfVerticesPerCluster a owl:DatatypeProperty;
+spm:expectedNumberOfVerticesPerCluster a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "60.632" ;
     ns1:iao.owlIAO_0000116 """Range: Positivefloat not found. BIRNLex or 
 NIDM Concept ID: spm_70. """ ;
@@ -591,7 +630,8 @@ NIDM Concept ID: spm_70. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Expected number of vertices in a cluster." .
 
-spm:expectedNumberOfVoxelsPerCluster a owl:DatatypeProperty;
+spm:expectedNumberOfVoxelsPerCluster a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "60.632" ;
     ns1:iao.owlIAO_0000116 """Range: Positivefloat not found. BIRNLex or 
 NIDM Concept ID: spm_71. """ ;
@@ -601,7 +641,8 @@ NIDM Concept ID: spm_71. """ ;
     prov:definition "Expected number of voxels in a cluster." .
 
 <http://www.incf.org/ns/nidash/spm#heightCriticalThresholdFDR05
-> a owl:DatatypeProperty;
+> a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "5.896" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_72. """ ;
@@ -610,7 +651,8 @@ NIDM Concept ID: spm_72. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Peak statistic threshold corrected for false discovery rate at a level of alpha = 0.05. " .
 
-spm:heightCriticalThresholdFWE05 a owl:DatatypeProperty;
+spm:heightCriticalThresholdFWE05 a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "4.913" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_73. """ ;
@@ -625,7 +667,8 @@ NIDM Concept ID: spm_74. """ ;
     rdfs:subClassOf prov:Activity ;
     prov:definition "Inference testing for the joint significance of a subset of the effects." .
 
-spm:maximumIntensityProjection a owl:DatatypeProperty;
+spm:maximumIntensityProjection a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "file:///path/to/MIP.png" ;
     ns1:iao.owlIAO_0000116 """Range: Pathtoanimage(e.g.png) not found. BIRNLex or 
 NIDM Concept ID: spm_75. """ ;
@@ -634,27 +677,30 @@ NIDM Concept ID: spm_75. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Maximum intensity projection of a map." .
 
-spm:noiseFWHMInUnits a owl:DatatypeProperty;
+spm:noiseFWHMInUnits a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "[8.87, 8.89, 7.83]" ;
     ns1:iao.owlIAO_0000116 """Range: Vectorofpositivefloats not found. BIRNLex or 
 NIDM Concept ID: spm_76. """ ;
     rdfs:domain nidm:MaskMap ;
     rdfs:range "Vectorofpositivefloats" ;
-    rdfs:subClassOf nidm:noiseFWHM,
-        prov:Attribute ;
+    rdfs:subClassOf prov:Attribute ;
+    rdfs:subPropertyOf nidm:noiseFWHM ;
     prov:definition "Estimated Full Width at Half Maximum of the noise distribution in world units." .
 
-spm:noiseFWHMInVertices a owl:DatatypeProperty;
+spm:noiseFWHMInVertices a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "[2.95, 2.96, 2.61]" ;
     ns1:iao.owlIAO_0000116 """Range: Vectorofpositivefloats not found. BIRNLex or 
 NIDM Concept ID: spm_77. """ ;
     rdfs:domain nidm:MaskMap ;
     rdfs:range "Vectorofpositivefloats" ;
-    rdfs:subClassOf nidm:noiseFWHM,
-        prov:Attribute ;
+    rdfs:subClassOf prov:Attribute ;
+    rdfs:subPropertyOf nidm:noiseFWHM ;
     prov:definition "Estimated Full Width at Half Maximum of the noise distribution in world vertices." .
 
-spm:noiseFWHMInVoxels a owl:DatatypeProperty;
+spm:noiseFWHMInVoxels a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "[3.7 3.7 3.1]" ;
     ns1:iao.owlIAO_0000116 """Context: NoiseFWHM nidm_0009. Range: Vectorofpositivefloats not found. BIRNLex or 
 NIDM Concept ID: spm_78. """ ;
@@ -664,7 +710,8 @@ NIDM Concept ID: spm_78. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Estimated Full Width at Half Maximum of the noise distribution in voxels." .
 
-spm:nonStationaryRandomField a owl:DatatypeProperty;
+spm:nonStationaryRandomField a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "<this is an attribute value>" ;
     ns1:iao.owlIAO_0000116 """Range: <thisisanattributevalue> not found. BIRNLex or 
 NIDM Concept ID: spm_79. """ ;
@@ -673,7 +720,8 @@ NIDM Concept ID: spm_79. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Random field that is variable across the search volume." .
 
-spm:reselSize a owl:DatatypeProperty;
+spm:reselSize a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "22.325" ;
     ns1:iao.owlIAO_0000116 """Range: Positivefloat not found. BIRNLex or 
 NIDM Concept ID: spm_80. """ ;
@@ -683,7 +731,8 @@ NIDM Concept ID: spm_80. """ ;
     prov:definition "Size of one resel in voxels or vertices." .
 
 <http://www.incf.org/ns/nidash/spm#searchVolumeInProductOfUnits
-> a owl:DatatypeProperty;
+> a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "1771011" ;
     ns1:iao.owlIAO_0000116 """Context: volumeInVoxels nidm_0025. Range: Positivefloat not found. BIRNLex or 
 NIDM Concept ID: spm_82. """ ;
@@ -692,7 +741,8 @@ NIDM Concept ID: spm_82. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Total number of product of coordinate units within the search volume." .
 
-spm:searchVolumeInResels a owl:DatatypeProperty;
+spm:searchVolumeInResels a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "151.3" ;
     ns1:iao.owlIAO_0000116 """Context: volumeInVoxels nidm_0025. Range: Positivefloat not found. BIRNLex or 
 NIDM Concept ID: spm_83. """ ;
@@ -702,7 +752,8 @@ NIDM Concept ID: spm_83. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Total number of resels within the search volume." .
 
-spm:searchVolumeInVertices a owl:DatatypeProperty;
+spm:searchVolumeInVertices a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "151.3" ;
     ns1:iao.owlIAO_0000116 """Range: Positivefloat not found. BIRNLex or 
 NIDM Concept ID: spm_84. """ ;
@@ -711,7 +762,8 @@ NIDM Concept ID: spm_84. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Total number of vertices within the search volume." .
 
-spm:searchVolumeInVoxels a owl:DatatypeProperty;
+spm:searchVolumeInVoxels a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "68656" ;
     ns1:iao.owlIAO_0000116 """Context: volumeInVoxels nidm_0025. BIRNLex or 
 NIDM Concept ID: spm_85. """ ;
@@ -721,18 +773,20 @@ NIDM Concept ID: spm_85. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Total number of voxels within the search volume." .
 
-spm:searchVolumeReselsGeometry a owl:DatatypeProperty;
+spm:searchVolumeReselsGeometry a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "[6 68.8 589.1 1475.5]" ;
     ns1:iao.owlIAO_0000116 """Context: volumeInResels nidm_0024. Range: Vectorof1positiveintegerand3positivefloats not found. BIRNLex or 
 NIDM Concept ID: spm_86. """ ;
     rdfs:domain nidm:MaskMap ;
     rdfs:range "Vectorof1positiveintegerand3positivefloats" ;
     rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/pubmed/20408186" ;
-    rdfs:subClassOf nidm:dimensions,
-        prov:Attribute ;
+    rdfs:subClassOf prov:Attribute ;
+    rdfs:subPropertyOf nidm:dimensions ;
     prov:definition "Description of geometry of search volume.  As per Worsley et al. [ http://www.ncbi.nlm.nih.gov/pubmed/20408186 ], the first element is the Euler Characteristic of the search volume, the second element is twice the average caliper diameter, the third element is half the surface area, and the fourth element is the volume.  With the exception of the first element (which is a unitless integer) all quantities are in units of Resels." .
 
-spm:smallestSignifClusterSizeInVerticesFDR05 a owl:DatatypeProperty;
+spm:smallestSignifClusterSizeInVerticesFDR05 a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "5" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_88. """ ;
@@ -741,7 +795,8 @@ NIDM Concept ID: spm_88. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Smallest cluster size in vertices that are significant at a false discovery rate corrected alpha value of 0.05.  " .
 
-spm:smallestSignifClusterSizeInVerticesFWE05 a owl:DatatypeProperty;
+spm:smallestSignifClusterSizeInVerticesFWE05 a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "2" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_89. """ ;
@@ -751,7 +806,8 @@ NIDM Concept ID: spm_89. """ ;
     prov:definition """Smallest cluster size in vertices significant at family-wise error rate corrected alpha value of 0.05. 
 """ .
 
-spm:smallestSignifClusterSizeInVoxelsFDR05 a owl:DatatypeProperty;
+spm:smallestSignifClusterSizeInVoxelsFDR05 a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "3" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_90. """ ;
@@ -760,7 +816,8 @@ NIDM Concept ID: spm_90. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Smallest cluster size in voxels significant at false discovery rate corrected alpha value of 0.05.  " .
 
-spm:smallestSignifClusterSizeInVoxelsFWE05 a owl:DatatypeProperty;
+spm:smallestSignifClusterSizeInVoxelsFWE05 a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "1" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_91. """ ;
@@ -770,7 +827,8 @@ NIDM Concept ID: spm_91. """ ;
     prov:definition """Smallest cluster size in voxels significant at family-wise error corrected alpha value of 0.05. 
 """ .
 
-spm:softwareRevision a owl:DatatypeProperty;
+spm:softwareRevision a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "5417" ;
     ns1:iao.owlIAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_92. """ ;
@@ -837,7 +895,8 @@ NIDM Concept ID: nidm_59. """ ;
         "nidm:Contrast" ;
     prov:definition "Contrast based on a t-statistic." .
 
-nidm:dimensions a owl:DatatypeProperty;
+nidm:dimensions a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "[64 64 20]" ;
     ns1:iao.owlIAO_0000116 """Range: Vectorofintegers not found. BIRNLex or 
 NIDM Concept ID: nidm_24. """ ;
@@ -871,7 +930,8 @@ NIDM Concept ID: nidm_23. """ ;
     rdfs:subClassOf prov:Entity ;
     prov:definition "A matrix of values defining the explanatory variables used in a regression model.  Each column corresponds to one explanatory variable, each row corresponds to one observation." .
 
-nidm:noiseFWHM a owl:DatatypeProperty;
+nidm:noiseFWHM a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "2.35" ;
     ns1:iao.owlIAO_0000116 """Context: Functional. Domain or Attributes: <onlychildofareusedinthedatamodel> not found. BIRNLex or 
 NIDM Concept ID: nidm_41. "type": SearchVol. """ ;
@@ -881,7 +941,8 @@ NIDM Concept ID: nidm_41. "type": SearchVol. """ ;
     rdfs:subClassOf prov:Attribute ;
     prov:definition "Estimated Full Width at Half Maximum of the noise distribution." .
 
-nidm:randomFieldStationarity a owl:DatatypeProperty;
+nidm:randomFieldStationarity a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     ns1:iao.owlIAO_0000112 "stationaryRandomField" ;
     ns1:iao.owlIAO_0000116 """Range: {nonStationaryRandomField not foundstationaryRandomField} not found. BIRNLex or 
 NIDM Concept ID: nidm_50. """ ;
@@ -1060,3 +1121,7 @@ NIDM Concept ID: nidm_38. """ ;
     rdfs:subClassOf prov:Entity ;
     prov:definition "map or surface on which the associated results are displayed. " .
 
+
+rdfs:subPropertyOf rdf:type rdf:Property . 
+rdfs:range rdf:type rdf:Property . 
+rdfs:domain rdf:type rdf:Property. 
