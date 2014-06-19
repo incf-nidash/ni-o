@@ -1121,6 +1121,7 @@ NIDM Concept ID: nidm_38. """ ;
     prov:definition "map or surface on which the associated results are displayed. " .
 
 
-rdfs:subPropertyOf rdf:type rdf:Property . 
-rdfs:range rdf:type rdf:Property . 
-rdfs:domain rdf:type rdf:Property. 
+rdfs:subPropertyOf rdf:type rdf:Property .
+rdfs:range rdf:type rdf:Property .
+ndfs:domain rdf:type rdf:Property. 
+prov:SoftwareAgent rdfs:subClassOf prov:Agent .
