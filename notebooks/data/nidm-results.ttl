@@ -444,6 +444,14 @@ NIDM Concept ID: nidm_50. """ ;
     rdfs:seeAlso "http://purl.obolibrary.org/obo/OBI_0001442" ;
     prov:definition "P-value adjusted for the multiple testing, controlling for the False Discovery Rate" .
 
+nidm:randomFieldStationarity a owl:DatatypeProperty,
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
+    iao:IAO_0000112 "stationaryRandomField" ;
+    iao:IAO_0000116 """Range: {nonStationaryRandomField not foundstationaryRandomField} not found. BIRNLex or 
+NIDM Concept ID: nidm_51. """ ;
+    rdfs:domain nidm:MaskMap ;
+    prov:definition "Is the random field assumed to be stationary across the entire search volume?" .
+
 nidm:smoothingFWHM a owl:DatatypeProperty,
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     iao:IAO_0000112 "[6 6 6]" ;
@@ -467,12 +475,11 @@ NIDM Concept ID: nidm_58. """ ;
     owl:sameAs "This definition is from OBI. Please update this note if the definition is modified." ;
     prov:definition "\"A quantitative confidence value which is the standard deviations of the sample in a frequency distribution, obtained by dividing the standard deviation by the total number of cases in the frequency distribution.\"" .
 
-nidm:stationaryRandomField a owl:DatatypeProperty,
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
+nidm:stationaryRandomField a owl:Class ;
     iao:IAO_0000112 "<this is an attribute value>" ;
     iao:IAO_0000116 """Range: <thisisanattributevalue> not found. BIRNLex or 
 NIDM Concept ID: nidm_59. """ ;
-    rdfs:domain nidm:randomFieldStationarity ;
+    rdfs:subClassOf prov:Entity ;
     prov:definition "Random-field that is constant across the search volume." .
 
 nidm:targetIntensity a owl:DatatypeProperty,
@@ -640,12 +647,11 @@ NIDM Concept ID: spm_80. """ ;
     rdfs:seeAlso "Synonyms of or close match with nidm:NoiseFWHM" ;
     prov:definition "Estimated Full Width at Half Maximum of the noise distribution in voxels." .
 
-spm:nonStationaryRandomField a owl:DatatypeProperty,
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
+spm:nonStationaryRandomField a owl:Class ;
     iao:IAO_0000112 "<this is an attribute value>" ;
     iao:IAO_0000116 """Range: <thisisanattributevalue> not found. BIRNLex or 
 NIDM Concept ID: spm_81. """ ;
-    rdfs:domain nidm:randomFieldStationarity ;
+    rdfs:subClassOf prov:Entity ;
     prov:definition "Random field that is variable across the search volume." .
 
 spm:reselSize a owl:DatatypeProperty,
@@ -844,14 +850,6 @@ nidm:noiseFWHM a owl:DatatypeProperty,
 NIDM Concept ID: nidm_42. "type": SearchVol. """ ;
     rdfs:seeAlso "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Full_Width_at_Half_Maximum" ;
     prov:definition "Estimated Full Width at Half Maximum of the noise distribution." .
-
-nidm:randomFieldStationarity a owl:DatatypeProperty,
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
-    iao:IAO_0000112 "stationaryRandomField" ;
-    iao:IAO_0000116 """Range: {nonStationaryRandomField not foundstationaryRandomField} not found. BIRNLex or 
-NIDM Concept ID: nidm_51. """ ;
-    rdfs:domain nidm:MaskMap ;
-    prov:definition "Is the random field assumed to be stationary across the entire search volume?" .
 
 nidm:Data a owl:Class ;
     iao:IAO_0000112 """entity(niiri:data_id,
