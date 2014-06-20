@@ -218,7 +218,7 @@ nidm:clusterLabelId a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_3. """ ;
     rdfs:domain nidm:ClusterStatistic ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#int" ;
+    rdfs:range xsd:int ;
     prov:definition "Integer associated with a particular cluster as specified in the clusterLabelsMap." .
 
 nidm:clusterLabelsMap a owl:DatatypeProperty,
@@ -236,7 +236,7 @@ nidm:clusterSizeInVertices a owl:DatatypeProperty,
 NIDM Concept ID: nidm_5. """ ;
     rdfs:domain nidm:ClusterStatistic,
         nidm:ExtentThreshold ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#positiveInteger" ;
+    rdfs:range xsd:positiveInteger ;
     prov:definition "Number of vertices that make up the cluster." .
 
 nidm:clusterSizeInVoxels a owl:DatatypeProperty,
@@ -246,7 +246,7 @@ nidm:clusterSizeInVoxels a owl:DatatypeProperty,
 NIDM Concept ID: nidm_6. """ ;
     rdfs:domain nidm:ClusterStatistic,
         nidm:ExtentThreshold ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#positiveInteger" ;
+    rdfs:range xsd:positiveInteger ;
     prov:definition "Number of voxels that make up the cluster." .
 
 nidm:contrastName a owl:DatatypeProperty,
@@ -258,7 +258,7 @@ NIDM Concept ID: nidm_11. """ ;
         nidm:FContrastWeights,
         nidm:TContrastWeights,
         nidm:TStatisticMap ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#string" ;
+    rdfs:range xsd:string ;
     prov:definition "Name of the contrast." .
 
 nidm:coordinate1 a owl:DatatypeProperty,
@@ -267,7 +267,7 @@ nidm:coordinate1 a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_15. """ ;
     rdfs:domain nidm:Coordinate ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#int" ;
+    rdfs:range xsd:int ;
     prov:definition "Coordinate along the first dimension in voxels." .
 
 nidm:coordinate1InUnits a owl:DatatypeProperty,
@@ -276,7 +276,7 @@ nidm:coordinate1InUnits a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_16. """ ;
     rdfs:domain nidm:Coordinate ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#float" ;
+    rdfs:range xsd:float ;
     prov:definition "Coordinate along the first dimension in voxel units." .
 
 nidm:coordinate2 a owl:DatatypeProperty,
@@ -285,7 +285,7 @@ nidm:coordinate2 a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_17. """ ;
     rdfs:domain nidm:Coordinate ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#int" ;
+    rdfs:range xsd:int ;
     prov:definition "Coordinate along the second dimension in voxels." .
 
 nidm:coordinate2InUnits a owl:DatatypeProperty,
@@ -294,7 +294,7 @@ nidm:coordinate2InUnits a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_18. """ ;
     rdfs:domain nidm:Coordinate ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#float" ;
+    rdfs:range xsd:float ;
     prov:definition "Coordinate along the second dimension in voxel units." .
 
 nidm:coordinate3 a owl:DatatypeProperty,
@@ -303,7 +303,7 @@ nidm:coordinate3 a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_19. """ ;
     rdfs:domain nidm:Coordinate ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#int" ;
+    rdfs:range xsd:int ;
     prov:definition "Coordinate along the third dimension in voxels." .
 
 nidm:coordinate3InUnits a owl:DatatypeProperty,
@@ -312,7 +312,7 @@ nidm:coordinate3InUnits a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_20. """ ;
     rdfs:domain nidm:Coordinate ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#float" ;
+    rdfs:range xsd:float ;
     prov:definition "Coordinate along the third dimension in voxel units" .
 
 nidm:coordinateSystem a owl:DatatypeProperty,
@@ -338,7 +338,7 @@ nidm:equivalentZStatistic a owl:DatatypeProperty,
     iao:IAO_0000116 """Context: Functional. Parent: Data transformation;  http://purl.obolibrary.org/obo/OBI_0200000 not found. BIRNLex or 
 NIDM Concept ID: nidm_27. new parent: Peak. """ ;
     rdfs:domain nidm:PeakStatistic ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#float" ;
+    rdfs:range xsd:float ;
     prov:definition "Statistic value transformed into Z units; the output of a process which takes a non-normal statistic and transforms it to an equivalent z score." .
 
 nidm:errorDegreesOfFreedom a owl:DatatypeProperty,
@@ -362,7 +362,7 @@ nidm:grandMeanScaling a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_96. """ ;
     rdfs:domain nidm:Data ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#boolean" ;
+    rdfs:range xsd:boolean ;
     prov:definition "Binary flag defining whether the data was scaled. Specifically, \"grand mean scaling\" refers to multipliciation of every voxel in every scan by a common value.  Grand mean scaling is essential for first-level fMRI, to transform the arbitrary MRI units, but is generally not used with second level analyses." .
 
 nidm:intraMaskMedian a owl:DatatypeProperty,
@@ -371,7 +371,7 @@ nidm:intraMaskMedian a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_98. """ ;
     rdfs:domain nidm:Data ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#float" ;
+    rdfs:range xsd:float ;
     rdfs:seeAlso "http://purl.obolibrary.org/obo/OBI_0200119" ;
     prov:definition "Median value considering only in-mask voxels. Useful diagnostic when computed on grand mean image when grandMeanScaling is TRUE, as the median should be close to targetIntensity." .
 
@@ -381,7 +381,7 @@ nidm:numberOfDimensions a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_43. """ ;
     rdfs:domain nidm:CoordinateSpace ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#positiveInteger" ;
+    rdfs:range xsd:positiveInteger ;
     prov:definition "Number of dimensions of a data matrix." .
 
 nidm:originalFileName a owl:DatatypeProperty,
@@ -392,7 +392,7 @@ NIDM Concept ID: nidm_44. """ ;
     rdfs:domain nidm:DesignMatrix,
         nidm:ExcursionSet,
         nidm:Map ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#string" ;
+    rdfs:range xsd:string ;
     prov:definition "Original name associated with a file (without path) in the context of the analysis software package." .
 
 nidm:pValue a owl:DatatypeProperty,
@@ -465,7 +465,7 @@ nidm:softwareVersion a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_55. """ ;
     rdfs:domain prov:SoftwareAgent ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#string" ;
+    rdfs:range xsd:string ;
     prov:definition "Name and number that specifies the software version." .
 
 nidm:standardError a owl:DatatypeProperty,
@@ -593,7 +593,7 @@ NIDM Concept ID: spm_73. """ ;
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_74. """ ;
     rdfs:domain spm:StatisticImageProperties ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#float" ;
+    rdfs:range xsd:float ;
     prov:definition "Peak statistic threshold corrected for false discovery rate at a level of alpha = 0.05. " .
 
 spm:heightCriticalThresholdFWE05 a owl:DatatypeProperty,
@@ -602,7 +602,7 @@ spm:heightCriticalThresholdFWE05 a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_75. """ ;
     rdfs:domain spm:StatisticImageProperties ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#float" ;
+    rdfs:range xsd:float ;
     prov:definition "Peak statistic threshold corrected for family-wise error at a level of alpha = 0.05. " .
 
 spm:kConjunctionInference a owl:Class ;
@@ -693,7 +693,7 @@ spm:searchVolumeInVoxels a owl:DatatypeProperty,
     iao:IAO_0000116 """Context: volumeInVoxels nidm_0025. BIRNLex or 
 NIDM Concept ID: spm_87. """ ;
     rdfs:domain nidm:MaskMap ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#positiveInteger" ;
+    rdfs:range xsd:positiveInteger ;
     rdfs:seeAlso "Synonyms of nidm:volumeInVoxels" ;
     prov:definition "Total number of voxels within the search volume." .
 
@@ -713,7 +713,7 @@ spm:smallestSignifClusterSizeInVerticesFDR05 a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_90. """ ;
     rdfs:domain spm:StatisticImageProperties ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#positiveInteger" ;
+    rdfs:range xsd:positiveInteger ;
     prov:definition "Smallest cluster size in vertices that are significant at a false discovery rate corrected alpha value of 0.05.  " .
 
 spm:smallestSignifClusterSizeInVerticesFWE05 a owl:DatatypeProperty,
@@ -722,7 +722,7 @@ spm:smallestSignifClusterSizeInVerticesFWE05 a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_91. """ ;
     rdfs:domain spm:StatisticImageProperties ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#positiveInteger" ;
+    rdfs:range xsd:positiveInteger ;
     prov:definition """Smallest cluster size in vertices significant at family-wise error rate corrected alpha value of 0.05. 
 """ .
 
@@ -732,7 +732,7 @@ spm:smallestSignifClusterSizeInVoxelsFDR05 a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_92. """ ;
     rdfs:domain spm:StatisticImageProperties ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#positiveInteger" ;
+    rdfs:range xsd:positiveInteger ;
     prov:definition "Smallest cluster size in voxels significant at false discovery rate corrected alpha value of 0.05.  " .
 
 spm:smallestSignifClusterSizeInVoxelsFWE05 a owl:DatatypeProperty,
@@ -741,7 +741,7 @@ spm:smallestSignifClusterSizeInVoxelsFWE05 a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_93. """ ;
     rdfs:domain spm:StatisticImageProperties ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#positiveInteger" ;
+    rdfs:range xsd:positiveInteger ;
     prov:definition """Smallest cluster size in voxels significant at family-wise error corrected alpha value of 0.05. 
 """ .
 
@@ -751,7 +751,7 @@ spm:softwareRevision a owl:DatatypeProperty,
     iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: spm_94. """ ;
     rdfs:domain prov:SoftwareAgent ;
-    rdfs:range "http://www.w3.org/2001/XMLSchema#int" ;
+    rdfs:range xsd:int ;
     prov:definition "revision number of a piece of software." .
 
 nidm:ContrastMap a owl:Class ;
