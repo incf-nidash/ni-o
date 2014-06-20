@@ -444,7 +444,7 @@ NIDM Concept ID: nidm_50. """ ;
     rdfs:seeAlso "http://purl.obolibrary.org/obo/OBI_0001442" ;
     prov:definition "P-value adjusted for the multiple testing, controlling for the False Discovery Rate" .
 
-nidm:randomFieldStationarity a owl:DatatypeProperty,
+nidm:randomFieldStationarity a owl:ObjectProperty,
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ;
     iao:IAO_0000112 "stationaryRandomField" ;
     iao:IAO_0000116 """Range: {nonStationaryRandomField not foundstationaryRandomField} not found. BIRNLex or 
@@ -476,8 +476,7 @@ NIDM Concept ID: nidm_58. """ ;
     prov:definition "\"A quantitative confidence value which is the standard deviations of the sample in a frequency distribution, obtained by dividing the standard deviation by the total number of cases in the frequency distribution.\"" .
 
 nidm:stationaryRandomField a owl:Class ;
-    iao:IAO_0000112 "<this is an attribute value>" ;
-    iao:IAO_0000116 """Range: <thisisanattributevalue> not found. BIRNLex or 
+    iao:IAO_0000116 """BIRNLex or 
 NIDM Concept ID: nidm_59. """ ;
     rdfs:subClassOf prov:Entity ;
     prov:definition "Random-field that is constant across the search volume." .
